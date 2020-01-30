@@ -2,7 +2,7 @@
 
 | Bintray | Windows | Linux & macOS |
 |:--------:|:---------:|:-----------------:|
-|[![Download](https://api.bintray.com/packages/bincrafters/public-conan/package_name%3Abincrafters/images/download.svg) ](https://bintray.com/bincrafters/public-conan/package_name%3Abincrafters/_latestVersion)|[![Build status](https://ci.appveyor.com/api/projects/status/github/bincrafters/conan-package_name?svg=true)](https://ci.appveyor.com/project/bincrafters/conan-package_name)|[![Build Status](https://travis-ci.com/bincrafters/conan-package_name.svg)](https://travis-ci.com/bincrafters/conan-package_name)|
+|[![Download](https://api.bintray.com/packages/bincrafters/public-conan/gdk-pixbuf%3Abincrafters/images/download.svg) ](https://bintray.com/bincrafters/public-conan/gdk-pixbuf%3Abincrafters/_latestVersion)|[![Build status](https://ci.appveyor.com/api/projects/status/github/bincrafters/conan-gdk-pixbuf?svg=true)](https://ci.appveyor.com/project/bincrafters/conan-gdk-pixbuf)|[![Build Status](https://travis-ci.com/bincrafters/conan-gdk-pixbuf.svg)](https://travis-ci.com/bincrafters/conan-gdk-pixbuf)|
 
 ## Conan Information
 
@@ -37,6 +37,6 @@ Bincrafters packages are hosted on [Bintray](https://bintray.com) and contain so
 
 The contents of this GIT repository are completely separate from the software being packaged and therefore licensed separately. The license for all files contained in this GIT repository are defined in the [LICENSE.md](LICENSE.md) file in this repository. The licenses included with all Conan packages published by Bincrafters can be found in the Conan package directories in the following locations, relative to the Conan Cache root (`~/.conan` by default):
 
-    ~/.conan/data/<pkg_name>/<pkg_version>/bincrafters/package/<random_package_id>/license/<LICENSE_FILES_HERE>
+    ~/.conan/data/gdk-pixbuf/<pkg_version>/bincrafters/package/<random_package_id>/license/<LICENSE_FILES_HERE>
 
 *Note :   The most common filenames for OSS licenses are `LICENSE` AND `COPYING` without file extensions.*

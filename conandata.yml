@@ -1,4 +1,4 @@
 sources:
-  "1.0.0":
-    url: "https://github.com/libauthor/libname"
-    sha256: "98f6f57aab0a424469619ed3047728f0d3901ce8f0dea919c11e7966d807e870"
+  "2.40.0":
+    url: "http://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.40/gdk-pixbuf-2.40.0.tar.xz"
+    sha256: "1582595099537ca8ff3b99c6804350b4c058bb8ad67411bbaae024ee7cead4e6"
