@@ -100,8 +100,9 @@ class LibnameConan(ConanFile):
 
     def package(self):
         self.copy(pattern="LICENSE", dst="licenses", src=self._source_subfolder)
-        meson = self._configure_meson()
-        meson.install()
+        with tools.environment_append({'LD_LIBRARY_PATH': os.path.join(self.package_folder, 'lib')}):
+            meson = self._configure_meson()
+            meson.install()
         # If the CMakeLists.txt has a proper install method, the steps below may be redundant
         # If so, you can just remove the lines below
         include_folder = os.path.join(self._source_subfolder, "include")
