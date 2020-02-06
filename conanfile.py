@@ -82,6 +82,7 @@ class LibnameConan(ConanFile):
         defs['jpeg'] = 'true' if self.options.with_libjpeg else 'false'
         defs['jasper'] = 'true' if self.options.with_jasper else 'false'
         defs['x11'] = 'false'
+        defs['builtin_loaders'] = 'all'
         args=[]
         args.append('--wrap-mode=nofallback')
         meson.configure(defs=defs, build_folder=self._build_subfolder, source_folder=self._source_subfolder, pkg_config_paths='.', args=args)
@@ -95,6 +96,7 @@ class LibnameConan(ConanFile):
                     if filename.endswith('.pc'):
                         shutil.copyfile(os.path.join(dirpath, filename), filename)
                         tools.replace_prefix_in_pc_file(filename, lib_path)
+        shutil.move('libpng.pc', 'libpng16.pc')
         meson = self._configure_meson()
         meson.build()
 
@@ -119,3 +121,4 @@ class LibnameConan(ConanFile):
         self.cpp_info.names['pkg_config'] = 'gdk-pixbuf-2.0'
         if self.settings.os == 'Linux':
             self.cpp_info.system_libs = ['m']
+        self.env_info.GDK_PIXBUF_PIXDATA = os.path.join(self.package_folder, 'bin', 'gdk-pixbuf-pixdata')
