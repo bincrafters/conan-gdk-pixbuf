@@ -112,6 +112,8 @@ class LibnameConan(ConanFile):
         self.cpp_info.libs = tools.collect_libs(self)
         self.cpp_info.includedirs = ['include/gdk-pixbuf-2.0']
         self.cpp_info.names['pkg_config'] = 'gdk-pixbuf-2.0'
+        if not self.options.shared:
+            self.cpp_info.defines.append('GDK_PIXBUF_STATIC_COMPILATION')
         if self.settings.os == 'Linux':
             self.cpp_info.system_libs = ['m']
         self.env_info.GDK_PIXBUF_PIXDATA = os.path.join(self.package_folder, 'bin', 'gdk-pixbuf-pixdata')
