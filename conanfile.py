@@ -10,10 +10,9 @@ class LibnameConan(ConanFile):
     topics = ("conan", "gdk-pixbuf", "image")
     url = "https://github.com/bincrafters/conan-gdk-pixbuf"
     homepage = "https://developer.gnome.org/gdk-pixbuf/"
-    license = "LGPL-2.1"
+    license = "LGPL-2.1-or-later"
     generators = "pkg_config"
 
-    # Options may need to change depending on the packaged library
     settings = "os", "arch", "compiler", "build_type"
     options = {
         "shared": [True, False],
@@ -101,12 +100,14 @@ class LibnameConan(ConanFile):
         meson.build()
 
     def package(self):
-        self.copy(pattern="LICENSE", dst="licenses", src=self._source_subfolder)
+        self.copy(pattern="COPYING", dst="licenses", src=self._source_subfolder)
         with tools.environment_append({'LD_LIBRARY_PATH': os.path.join(self.package_folder, 'lib')}):
             meson = self._configure_meson()
             meson.install()
         if self.settings.compiler == "Visual Studio" and not self.options.shared:
             os.rename(os.path.join(self.package_folder, 'lib', 'libgdk_pixbuf-2.0.a'), os.path.join(self.package_folder, 'lib', 'gdk_pixbuf-2.0.lib'))
+        tools.rmdir(os.path.join(self.package_folder, "lib", "pkgconfig"))
+        tools.rmdir(os.path.join(self.package_folder, "share"))
 
     def package_info(self):
         self.cpp_info.libs = tools.collect_libs(self)
