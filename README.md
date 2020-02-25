@@ -1,8 +1,8 @@
 ## Package Status
 
-| Bintray | Windows | Linux & macOS |
-|:--------:|:---------:|:-----------------:|
-|[![Download](https://api.bintray.com/packages/bincrafters/public-conan/gdk-pixbuf%3Abincrafters/images/download.svg) ](https://bintray.com/bincrafters/public-conan/gdk-pixbuf%3Abincrafters/_latestVersion)|[![Build status](https://ci.appveyor.com/api/projects/status/github/bincrafters/conan-gdk-pixbuf?svg=true)](https://ci.appveyor.com/project/bincrafters/conan-gdk-pixbuf)|[![Build Status](https://travis-ci.com/bincrafters/conan-gdk-pixbuf.svg)](https://travis-ci.com/bincrafters/conan-gdk-pixbuf)|
+| Bintray | Windows | macOS | Linux |
+|:--------:|:---------:|:---------:|:---------:|
+|[![Download](https://api.bintray.com/packages/bincrafters/public-conan/gdk-pixbuf%3Abincrafters/images/download.svg) ](https://bintray.com/bincrafters/public-conan/gdk-pixbuf%3Abincrafters/_latestVersion)|[![Build status](https://ci.appveyor.com/api/projects/status/github/bincrafters/conan-gdk-pixbuf?svg=true)](https://ci.appveyor.com/project/bincrafters/conan-gdk-pixbuf)|[![Build Status](https://travis-ci.com/bincrafters/conan-gdk-pixbuf.svg)](https://travis-ci.com/bincrafters/conan-gdk-pixbuf)|[![Build Status](https://github.com/bincrafters/conan-gdk-pixbuf/workflows/.github/workflows/conan.yml/badge.svg)](https://github.com/bincrafters/conan-gdk-pixbuf/actions)|
 
 ## Conan Information
 
