@@ -39,7 +39,7 @@ class LibnameConan(ConanFile):
             del self.options.fPIC
     
     def build_requirements(self):
-        self.build_requires('meson/0.53.2')
+        self.build_requires('meson/0.54.0')
         if not tools.which('pkg-config'):
             self.build_requires('pkg-config_installer/0.29.2@bincrafters/stable')
     
