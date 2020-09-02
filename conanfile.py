@@ -49,7 +49,7 @@ class LibnameConan(ConanFile):
             installer.install("shared-mime-info")
     
     def requirements(self):
-        self.requires('glib/2.64.0@bincrafters/stable')
+        self.requires('glib/2.65.1')
         if self.options.with_libpng:
             self.requires('libpng/1.6.37')
         if self.options.with_libtiff:
