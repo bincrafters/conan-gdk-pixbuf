@@ -41,7 +41,7 @@ class LibnameConan(ConanFile):
     def build_requirements(self):
         self.build_requires('meson/0.54.2')
         if not tools.which('pkg-config') or self.settings.os == "Windows":
-            self.build_requires('pkg-config_installer/0.29.2@bincrafters/stable')
+            self.build_requires('pkgconf/1.7.3')
     
     def system_requirements(self):
         if self.settings.os == 'Linux':
@@ -49,7 +49,7 @@ class LibnameConan(ConanFile):
             installer.install("shared-mime-info")
     
     def requirements(self):
-        self.requires('glib/2.65.1')
+        self.requires('glib/2.66.0')
         if self.options.with_libpng:
             self.requires('libpng/1.6.37')
         if self.options.with_libtiff:
@@ -57,7 +57,7 @@ class LibnameConan(ConanFile):
         if self.options.with_libjpeg:
             self.requires('libjpeg/9d')
         if self.options.with_jasper:
-            self.requires('jasper/2.0.14')
+            self.requires('jasper/2.0.19')
 
     def configure(self):
         del self.settings.compiler.libcxx
