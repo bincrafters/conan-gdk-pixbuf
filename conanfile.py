@@ -68,6 +68,7 @@ class LibnameConan(ConanFile):
         extracted_dir = self.name + "-" + self.version
         os.rename(extracted_dir, self._source_subfolder)
         tools.replace_in_file(os.path.join(self._source_subfolder, 'meson.build'), "subdir('tests')", "#subdir('tests')")
+        tools.replace_in_file(os.path.join(self._source_subfolder, "meson.build"), "gmodule_dep.get_pkgconfig_variable('gmodule_supported')", "'true'")
 
     def _configure_meson(self):
         meson = Meson(self)
