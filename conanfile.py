@@ -23,7 +23,7 @@ class LibnameConan(ConanFile):
         "with_jasper": [True, False],
         }
     default_options = {
-        "shared": True,
+        "shared": False,
         "fPIC": True,
         "with_libpng": True,
         "with_libtiff": True,
